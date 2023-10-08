@@ -42,11 +42,7 @@ const Home = () => {
           <div className="modal-container" key={index}>
             <CardCompo
               titleCardOne={Item.titleCardOne}
-              titleCardSecond={Item.titleCardOne}
-              titleCardThird={Item.titleCardOne}
               descriptionOne={Item.descriptionOne}
-              descriptionSecond={Item.descriptionSecond}
-              descriptionThird={Item.descriptionThird}
             />
           </div>
         );
