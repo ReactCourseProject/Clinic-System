@@ -17,8 +17,9 @@
     --Third-color: #047ed4;
     --Fourth-color: #00C6AC;
     --Fifth-color: #205B85;
-    
+
 }
+
 
 html {
     scroll-behavior: smooth;
@@ -528,6 +529,7 @@ ul {
 
 
 .wrapper {
+    margin-left: 23%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -540,12 +542,13 @@ ul {
 }
 
 
+
 .items-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: animate 20s linear infinite; 
-    animation-delay: -1s; 
+    animation: animate 20s linear infinite;
+    animation-delay: -1s;
 }
 
 
@@ -557,11 +560,10 @@ ul {
 
 @keyframes animate {
     0% {
-        transform: translateX(100%); 
+        transform: translateX(100%);
     }
 
     100% {
-        transform: translateX(-100%); 
+        transform: translateX(-100%);
     }
 }
-
