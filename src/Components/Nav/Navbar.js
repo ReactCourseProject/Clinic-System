@@ -18,14 +18,22 @@ const Navbars = () => {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link className="active">Home</Nav.Link>
-              <NavDropdown title="Pages" id="basic-nav-dropdown">
+              <NavDropdown
+                title="Pages"
+                id="basic-nav-dropdown"
+                style={{ marginBottom: "10px" }}
+              >
                 <NavDropdown.Item href="#action/3.1">About us</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.1">Our Team</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.1">Booking</NavDropdown.Item>
                 <NavDropdown.Divider />
               </NavDropdown>
 
-              <NavDropdown title="Services" id="basic-nav-dropdown">
+              <NavDropdown
+                title="Services"
+                id="basic-nav-dropdown"
+                style={{ marginBottom: "10px" }}
+              >
                 <NavDropdown.Item href="#action/3.1">
                   Service Details
                 </NavDropdown.Item>

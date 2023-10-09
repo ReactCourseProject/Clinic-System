@@ -123,8 +123,6 @@ nav .navbar-nav .dropdown-menu {
     border: 1px solid #fff;
     border-radius: 15px;
     width: 200px;
-
-
 }
 
 nav .navbar-nav .dropdown-menu li {
@@ -143,7 +141,7 @@ nav .navbar-nav .dropdown-menu a {
 }
 
 nav .navbar-nav .dropdown-menu a:hover {
-    color: #37688e !important;
+    color: #00C6AC !important;
 }
 
 [type=button]:not(:disabled),
@@ -161,7 +159,12 @@ nav .navbar-nav .dropdown-menu {
     background-color: #fff;
     border: 1px solid #fff;
     border-radius: 15px;
-    width: 10px;
+    width: 30px;
+    height: 150px;
+}
+
+nav .navbar-nav .dropdown-menu .Serv{
+    height: 50px;
 }
 
 nav .navbar-nav .dropdown-menu li {
