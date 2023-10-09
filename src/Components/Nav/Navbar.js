@@ -22,12 +22,10 @@ const Navbars = () => {
                 <NavDropdown.Item href="#action/3.1">About us</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.1">Our Team</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.1">Booking</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.1">Login</NavDropdown.Item>
                 <NavDropdown.Divider />
               </NavDropdown>
 
               <NavDropdown title="Services" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Service</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.1">
                   Service Details
                 </NavDropdown.Item>
