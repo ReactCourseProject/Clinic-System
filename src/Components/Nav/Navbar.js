@@ -6,6 +6,8 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import "./Nav.css";
 import logo from "../../Assets/logo.png";
+
+
 const Navbars = () => {
   return (
     <>
@@ -17,7 +19,7 @@ const Navbars = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link className="active">Home</Nav.Link>
+              <Nav.Link className="active"  href="/">Home</Nav.Link>
               <NavDropdown
                 title="Pages"
                 id="basic-nav-dropdown"
@@ -34,13 +36,13 @@ const Navbars = () => {
                 id="basic-nav-dropdown"
                 style={{ marginBottom: "10px" }}
               >
-                <NavDropdown.Item href="#action/3.1">
+                <NavDropdown.Item href="/src/Components/service/serviceDetails">
                   Service Details
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
               </NavDropdown>
 
-              <button>Login</button>
+              <button className="login-button" >Login</button>
             </Nav>
           </Navbar.Collapse>
         </Container>
