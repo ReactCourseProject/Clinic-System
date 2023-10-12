@@ -3,15 +3,16 @@ import "./App.css";
 import Navbars from "./Components/Nav/Navbar";
 import FeedbackCard from "./Components/service/FeedbackCard";
 import serviceDetails from "./Components/service/serviceDetails";
+
 import {
   BrowserRouter as Router,
   Routes,
   Route,
   BrowserRouter,
 } from "react-router-dom";
+
 import AboutUs from "./Components/AboutPage/About";
 import OurTeams from "./Components/OurTeam/OurTeam";
-
 function App() {
   return (
     <>
