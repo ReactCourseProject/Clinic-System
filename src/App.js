@@ -10,6 +10,7 @@ import {
   Route,
   BrowserRouter,
 } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom"; // Import useHistory and Link
 
 import AboutUs from "./Components/AboutPage/About";
 import OurTeams from "./Components/OurTeam/OurTeam";

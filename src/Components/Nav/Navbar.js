@@ -1,4 +1,4 @@
-import Button from "react-bootstrap/Button";
+import React from "react";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
@@ -6,13 +6,14 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import "./Nav.css";
 import logo from "../Assets/download.png";
+
 const Navbars = () => {
   return (
     <>
       <Navbar expand="lg" bg="light">
         <Container>
           <Navbar.Brand href="/src/Components/Nav/Navbar.js">
-            <img href="/src/Components/Nav/Navbar.js" src={logo} />
+            <img src={logo} alt="Logo" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
@@ -46,7 +47,15 @@ const Navbars = () => {
                 <NavDropdown.Divider />
               </NavDropdown>
 
-              <button className="login-button">Login</button>
+              <a href="" className="login-button">
+                <button
+                  class="login-button btn btn-primary"
+                  className="login-button"
+                  variant="primary"
+                >
+                  Login
+                </button>
+              </a>
             </Nav>
           </Navbar.Collapse>
         </Container>
