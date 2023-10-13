@@ -1,0 +1,36 @@
+[
+    {
+      "ID": 101,
+      "FirstName": "John",
+      "LastName": "Doe",
+      "DateOfBirth": "1990-05-15",
+      "Gender": "Male",
+      "Email": "john.doe@example.com",
+      "City": "Anytown",
+      "Street": "Main Street",
+      "BuildingNumber": 123
+    },
+    {
+      "ID": 102,
+      "FirstName": "Jane",
+      "LastName": "Smith",
+      "DateOfBirth": "1985-08-20",
+      "Gender": "Female",
+      "Email": "jane.smith@example.com",
+      "City": "Cityville",
+      "Street": "Oak Avenue",
+      "BuildingNumber": 456
+    },
+    {
+      "ID": 103,
+      "FirstName": "David",
+      "LastName": "Johnson",
+      "DateOfBirth": "1978-03-10",
+      "Gender": "Male",
+      "Email": "david.johnson@example.com",
+      "City": "Suburbia",
+      "Street": "Elm Street",
+      "BuildingNumber": 789
+    }
+  ]
+  

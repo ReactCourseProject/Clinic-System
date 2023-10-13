@@ -1,0 +1,36 @@
+[
+    {
+      "ID": 1,
+      "testName": "Blood Pressure",
+      "testType": "Physical Examination",
+      "testDate": "2023-10-15",
+      "testResults": "Normal",
+      "testNotes": "Routine checkup.",
+      "DoctorID": 201,
+      "PatientsID": 101,
+      "BillingID": 301
+    },
+    {
+      "ID": 2,
+      "testName": "Complete Blood Count",
+      "testType": "Laboratory Test",
+      "testDate": "2023-10-16",
+      "testResults": "Within normal range.",
+      "testNotes": "No significant findings.",
+      "DoctorID": 202,
+      "PatientsID": 102,
+      "BillingID": 302
+    },
+    {
+      "ID": 3,
+      "testName": "X-ray",
+      "testType": "Imaging",
+      "testDate": "2023-10-17",
+      "testResults": "No fractures detected.",
+      "testNotes": "Patient had a minor fall.",
+      "DoctorID": 203,
+      "PatientsID": 103,
+      "BillingID": 303
+    }
+  ]
+  

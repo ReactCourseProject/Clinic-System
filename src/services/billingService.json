@@ -1,0 +1,36 @@
+[
+    {
+      "ID": 1313,
+      "PaymentMethod": "Credit Card",
+      "TotalAmount": 100.0,
+      "Date": "2023-10-13",
+      "Status": "Completed",
+      "DoctorID": 101,
+      "PatientsID": 201,
+      "TestID": 301,
+      "MedicationID": 401
+    },
+    {
+      "ID": 1212,
+      "PaymentMethod": "Cash",
+      "TotalAmount": 75.5,
+      "Date": "2023-10-14",
+      "Status": "Pending",
+      "DoctorID": 102,
+      "PatientsID": 202,
+      "TestID": 302,
+      "MedicationID": 402
+    },
+    {
+      "ID":1111,
+      "PaymentMethod": "Debit Card",
+      "TotalAmount": 120.75,
+      "Date": "2023-10-15",
+      "Status": "Cancelled",
+      "DoctorID": 103,
+      "PatientsID": 203,
+      "TestID": 303,
+      "MedicationID": 403
+    }
+  ]
+  

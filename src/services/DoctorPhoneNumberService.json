@@ -1,0 +1,15 @@
+[
+    {
+      "doctorID": 101,
+      "phoneNumber": "+1234567890"
+    },
+    {
+      "doctorID": 102,
+      "phoneNumber": "+9876543210"
+    },
+    {
+      "doctorID": 103,
+      "phoneNumber": "+1112223333"
+    }
+  ]
+  

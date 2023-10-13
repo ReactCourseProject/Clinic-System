@@ -1,0 +1,15 @@
+[
+    {
+      "patientID": 101,
+      "phoneNumber": "+1234567890"
+    },
+    {
+      "patientID": 102,
+      "phoneNumber": "+9876543210"
+    },
+    {
+      "patientID": 103,
+      "phoneNumber": "+1112223333"
+    }
+  ]
+  

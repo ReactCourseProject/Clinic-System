@@ -1,6 +1,21 @@
 const API_URL = 'http://localhost:5000/api/appointments';
 
+const fs = require('fs');
+const jsonFilePath = 'appointments.json';
+
 const AppointmentService = {
+  //moahmemd part
+  readAppointments: () => {
+    try {
+      const jsonData = fs.readFileSync(jsonFilePath, 'utf-8');
+      return JSON.parse(jsonData);
+    } catch (error) {
+      console.error('Error reading JSON file:', error);
+      return [];
+    }
+  },
+  //moahmemd part
+
   getAllAppointments: async () => {
     const response = await fetch(API_URL);
     const data = await response.json();
