@@ -1,49 +1,57 @@
-const API_URL = 'http://localhost:5000/api/tests';
+const fs = require('fs');
+const path = require('path');
+
+const TEST_DATA_PATH = path.join(__dirname, 'testService.json');
+
+const readTestData = () => {
+  try {
+    const rawData = fs.readFileSync(TEST_DATA_PATH, 'utf-8');
+    return JSON.parse(rawData);
+  } catch (error) {
+    console.error('Error reading JSON file:', error);
+    return [];
+  }
+};
+
+const writeTestData = (data) => {
+  fs.writeFileSync(TEST_DATA_PATH, JSON.stringify(data, null, 2));
+};
 
 const TestService = {
-  getAllTests: async () => {
-    const response = await fetch(API_URL);
-    const data = await response.json();
-    return data;
+  getAllTests: () => {
+    return readTestData();
   },
 
-  getTestById: async (id) => {
-    const response = await fetch(`${API_URL}/${id}`);
-    const data = await response.json();
-    return data;
+  getTestById: (id) => {
+    const tests = readTestData();
+    return tests.find(test => test.id === id);
   },
 
-  createTest: async (testData) => {
-    const response = await fetch(API_URL, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(testData),
-    });
-    const data = await response.json();
-    return data;
+  createTest: (testData) => {
+    const tests = readTestData();
+    testData.id = generateUniqueId(); // Implement a function to generate unique IDs
+    tests.push(testData);
+    writeTestData(tests);
+    return testData;
   },
 
-  updateTest: async (id, testData) => {
-    const response = await fetch(`${API_URL}/${id}`, {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(testData),
-    });
-    const data = await response.json();
-    return data;
+  updateTest: (id, testData) => {
+    const tests = readTestData();
+    const existingTestIndex = tests.findIndex(test => test.id === id);
+    if (existingTestIndex !== -1) {
+      tests[existingTestIndex] = { id, ...testData };
+      writeTestData(tests);
+      return tests[existingTestIndex];
+    }
+    return null; // Return null if test with given ID is not found
   },
 
-  deleteTest: async (id) => {
-    const response = await fetch(`${API_URL}/${id}`, {
-      method: 'DELETE',
-    });
-    const data = await response.json();
-    return data;
+  deleteTest: (id) => {
+    const tests = readTestData();
+    const updatedTests = tests.filter(test => test.id !== id);
+    writeTestData(updatedTests);
+    return true; // Return true if deletion is successful, false otherwise
   },
 };
 
-export default TestService;
+module.exports = TestService;

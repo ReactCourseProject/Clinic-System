@@ -1,49 +1,57 @@
-const API_URL = 'http://localhost:5000/api/doctors'; // Your backend API URL
+const fs = require('fs');
+const path = require('path');
+
+const DOCTOR_DATA_PATH = path.join(__dirname, 'doctorService.json');
+
+const readDoctorData = () => {
+  try {
+    const rawData = fs.readFileSync(DOCTOR_DATA_PATH, 'utf-8');
+    return JSON.parse(rawData);
+  } catch (error) {
+    console.error('Error reading JSON file:', error);
+    return [];
+  }
+};
+
+const writeDoctorData = (data) => {
+  fs.writeFileSync(DOCTOR_DATA_PATH, JSON.stringify(data, null, 2));
+};
 
 const DoctorService = {
-  getAllDoctors: async () => {
-    const response = await fetch(API_URL);
-    const data = await response.json();
-    return data;
+  getAllDoctors: () => {
+    return readDoctorData();
   },
 
-  getDoctorById: async (id) => {
-    const response = await fetch(`${API_URL}/${id}`);
-    const data = await response.json();
-    return data;
+  getDoctorById: (id) => {
+    const doctors = readDoctorData();
+    return doctors.find(doctor => doctor.id === id);
   },
 
-  createDoctor: async (doctorData) => {
-    const response = await fetch(API_URL, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(doctorData),
-    });
-    const data = await response.json();
-    return data;
+  createDoctor: (doctorData) => {
+    const doctors = readDoctorData();
+    doctorData.id = generateUniqueId(); // Implement a function to generate unique IDs
+    doctors.push(doctorData);
+    writeDoctorData(doctors);
+    return doctorData;
   },
 
-  updateDoctor: async (id, doctorData) => {
-    const response = await fetch(`${API_URL}/${id}`, {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(doctorData),
-    });
-    const data = await response.json();
-    return data;
+  updateDoctor: (id, doctorData) => {
+    const doctors = readDoctorData();
+    const existingDoctorIndex = doctors.findIndex(doctor => doctor.id === id);
+    if (existingDoctorIndex !== -1) {
+      doctors[existingDoctorIndex] = { id, ...doctorData };
+      writeDoctorData(doctors);
+      return doctors[existingDoctorIndex];
+    }
+    return null; // Return null if doctor with given ID is not found
   },
 
-  deleteDoctor: async (id) => {
-    const response = await fetch(`${API_URL}/${id}`, {
-      method: 'DELETE',
-    });
-    const data = await response.json();
-    return data;
+  deleteDoctor: (id) => {
+    const doctors = readDoctorData();
+    const updatedDoctors = doctors.filter(doctor => doctor.id !== id);
+    writeDoctorData(updatedDoctors);
+    return true; // Return true if deletion is successful, false otherwise
   },
 };
 
-export default DoctorService;
+module.exports = DoctorService;

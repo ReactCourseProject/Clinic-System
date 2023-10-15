@@ -1,49 +1,52 @@
-const API_URL = 'http://localhost:5000/api/billing';
+const fs = require('fs');
+const path = require('path');
+
+const BILLING_DATA_PATH = path.join(__dirname, 'billingService.json');
+
+const readBillingData = () => {
+  const rawData = fs.readFileSync(BILLING_DATA_PATH);
+  return JSON.parse(rawData);
+};
+
+const writeBillingData = (data) => {
+  fs.writeFileSync(BILLING_DATA_PATH, JSON.stringify(data, null, 2));
+};
 
 const BillingService = {
-  getAllBillings: async () => {
-    const response = await fetch(API_URL);
-    const data = await response.json();
-    return data;
+  getAllBillings: () => {
+    return readBillingData();
   },
 
-  getBillingById: async (id) => {
-    const response = await fetch(`${API_URL}/${id}`);
-    const data = await response.json();
-    return data;
+  getBillingById: (id) => {
+    const billings = readBillingData();
+    return billings.find(billing => billing.id === id);
   },
 
-  createBilling: async (billingData) => {
-    const response = await fetch(API_URL, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(billingData),
-    });
-    const data = await response.json();
-    return data;
+  createBilling: (billingData) => {
+    const billings = readBillingData();
+    billingData.id = generateUniqueId(); // Implement a function to generate unique IDs
+    billings.push(billingData);
+    writeBillingData(billings);
+    return billingData;
   },
 
-  updateBilling: async (id, billingData) => {
-    const response = await fetch(`${API_URL}/${id}`, {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(billingData),
-    });
-    const data = await response.json();
-    return data;
+  updateBilling: (id, billingData) => {
+    const billings = readBillingData();
+    const existingBillingIndex = billings.findIndex(billing => billing.id === id);
+    if (existingBillingIndex !== -1) {
+      billings[existingBillingIndex] = { id, ...billingData };
+      writeBillingData(billings);
+      return billings[existingBillingIndex];
+    }
+    return null; // Return null if billing with given ID is not found
   },
 
-  deleteBilling: async (id) => {
-    const response = await fetch(`${API_URL}/${id}`, {
-      method: 'DELETE',
-    });
-    const data = await response.json();
-    return data;
+  deleteBilling: (id) => {
+    const billings = readBillingData();
+    const updatedBillings = billings.filter(billing => billing.id !== id);
+    writeBillingData(updatedBillings);
+    return true; // Return true if deletion is successful, false otherwise
   },
 };
 
-export default BillingService;
+module.exports = BillingService;
