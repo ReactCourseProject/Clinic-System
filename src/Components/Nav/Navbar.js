@@ -32,7 +32,9 @@ const Navbars = () => {
                 <NavDropdown.Item href="/src/Components/OurTeam/OurTeam.js">
                   Our Team
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.1">Booking</NavDropdown.Item>
+                <NavDropdown.Item href="/src/Components/SideBar/PatientDashboard/PatientDashboard.js">
+                  Booking
+                </NavDropdown.Item>
                 <NavDropdown.Divider />
               </NavDropdown>
 
@@ -47,7 +49,10 @@ const Navbars = () => {
                 <NavDropdown.Divider />
               </NavDropdown>
 
-              <a href="" className="login-button">
+              <a
+                href="/src/Components/SideBar/Dashboard.js"
+                className="login-button"
+              >
                 <button
                   class="login-button btn btn-primary"
                   className="login-button"

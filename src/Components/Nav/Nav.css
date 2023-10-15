@@ -1,5 +1,3 @@
-
-
 nav {
     /* background-color: #f8f9fa; */
     width: 100%;
@@ -165,7 +163,7 @@ nav .navbar-nav .dropdown-menu {
     height: 150px;
 }
 
-nav .navbar-nav .dropdown-menu .Serv{
+nav .navbar-nav .dropdown-menu .Serv {
     height: 50px;
 }
 
@@ -213,7 +211,7 @@ nav .navbar-nav .dropdown-menu a:hover {
 
 }
 
-  .login-button::after {
+button::after {
     content: "";
     background: white;
     position: absolute;
@@ -224,9 +222,9 @@ nav .navbar-nav .dropdown-menu a:hover {
     bottom: 0;
     transform: skewX(-45deg) scale(0, 1);
     transition: all 0.5s;
-  }
+}
 
-  .btn-primary {
+.btn-primary {
     background-color: #c21700;
     --bs-btn-color: #fff;
     --bs-btn-bg: #55fd0d;
@@ -234,7 +232,7 @@ nav .navbar-nav .dropdown-menu a:hover {
     --bs-btn-hover-color: #fff;
     --bs-btn-hover-bg: #d72d0b;
     --bs-btn-hover-border-color: #c21700;
-    --bs-btn-focus-shadow-rgb: 49,132,253;
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
     --bs-btn-active-color: #fff;
     --bs-btn-active-bg: #ca1d0a;
     --bs-btn-active-border-color: #be1f0a;
