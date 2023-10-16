@@ -1,0 +1,27 @@
+[
+    {
+      "ID": 101,
+      "FirstName": "John",
+      "LastName": "Doe",
+      "Email": "john.doe@gmail.com",
+      "Specialization": "Cardiologist",
+      "WorkingHours": "Mon-Fri: 9:00 AM - 5:00 PM"
+    },
+    {
+      "ID": 102,
+      "FirstName": "Jane",
+      "LastName": "Smith",
+      "Email": "jane.smith@gmail.com",
+      "Specialization": "Pediatrician",
+      "WorkingHours": "Tue-Thu: 10:00 AM - 6:00 PM"
+    },
+    {
+      "ID": 103,
+      "FirstName": "David",
+      "LastName": "Johnson",
+      "Email": "david.johnson@gmail.com",
+      "Specialization": "Dermatologist",
+      "WorkingHours": "Mon, Wed, Fri: 8:00 AM - 4:00 PM"
+    }
+  ]
+  

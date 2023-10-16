@@ -1,0 +1,30 @@
+[
+    {
+      "ID": 1,
+      "Date": "2023-10-15",
+      "Time": "09:00 AM",
+      "Status": "Scheduled",
+      "Reason": "Follow-up checkup",
+      "PatientID": 101,
+      "DoctorID": 201
+    },
+    {
+      "ID": 2,
+      "Date": "2023-10-16",
+      "Time": "02:30 PM",
+      "Status": "Completed",
+      "Reason": "Annual physical",
+      "PatientID": 102,
+      "DoctorID": 202
+    },
+    {
+      "ID": 3,
+      "Date": "2023-10-17",
+      "Time": "11:15 AM",
+      "Status": "Cancelled",
+      "Reason": "Rescheduling",
+      "PatientID": 103,
+      "DoctorID": 203
+    }
+  ]
+  

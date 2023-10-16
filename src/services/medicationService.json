@@ -1,0 +1,24 @@
+[
+    {
+      "ID": 1,
+      "frequency": 2,
+      "medicationName": "Aspirin",
+      "dosage": "1 tablet",
+      "prescriptionDate": "2023-10-15"
+    },
+    {
+      "ID": 2,
+      "frequency": 1,
+      "medicationName": "Ibuprofen",
+      "dosage": "2 tablets",
+      "prescriptionDate": "2023-10-16"
+    },
+    {
+      "ID": 3,
+      "frequency": 3,
+      "medicationName": "Antibiotic",
+      "dosage": "1 capsule",
+      "prescriptionDate": "2023-10-17"
+    }
+  ]
+  
