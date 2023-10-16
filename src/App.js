@@ -1,24 +1,104 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import Navbars from "./Components/Nav/Navbar";
+import FeedbackCard from "./Components/service/FeedbackCard";
+import serviceDetails from "./Components/service/serviceDetails";
+import AboutUs from "./Components/AboutPage/About";
+import OurTeams from "./Components/OurTeam/OurTeam";
+import DashBoard from "./Components/SideBar/Dashboard";
+import PatientSec from "./Components/SideBar/PatientSec";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  BrowserRouter,
+} from "react-router-dom";
+import { Link, useHistory } from "react-router-dom"; // Import useHistory and Link
+import Appointment from "./Components/SideBar/Appointments";
+import DaySheet_ from "./Components/SideBar/DaySheet";
+import PatientDashboard_ from "./Components/SideBar/PatientDashboard/PatientDashboard";
+import AppointmentsPatient_ from "./Components/SideBar/PatientDashboard/AppointmentsPatient";
+import SignInSignUpForm from "./Components/login/SignInSignUp";
+import CardLogin from "./Components/login/CardLogin";
+import SignInForDoctor from "./Components/login/SignInForDoctor";
+import RegistrationForm from "./Components/login/RegistrationForm";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <Routes>
+          <Route
+            path="/src/Components/AboutPage/About.js"
+            Component={AboutUs}
+          ></Route>
+
+          <Route
+            path="/src/Components/service/serviceDetails"
+            Component={serviceDetails}
+          ></Route>
+          <Route
+            path="/src/Components/service/FeedbackCard"
+            Component={FeedbackCard}
+          ></Route>
+
+          <Route
+            path="/src/Components/OurTeam/OurTeam.js"
+            Component={OurTeams}
+          ></Route>
+
+          <Route
+            path="/src/Components/SideBar/Dashboard.js"
+            Component={DashBoard}
+          ></Route>
+
+          <Route
+            path="/src/Components/SideBar/PatientSec.js"
+            Component={PatientSec}
+          ></Route>
+
+          <Route
+            path="/src/Components/SideBar/Appointments.js"
+            Component={Appointment}
+          ></Route>
+
+          <Route
+            path="/src/Components/SideBar/DaySheet.js"
+            Component={DaySheet_}
+          ></Route>
+
+          <Route
+            path="/src/Components/SideBar/PatientDashboard/PatientDashboard.js"
+            Component={PatientDashboard_}
+          ></Route>
+
+          <Route
+            path="/src/Components/SideBar/PatientDashboard/AppointmentsPatient.js"
+            Component={AppointmentsPatient_}
+          ></Route>
+
+          <Route
+            path="/src/Components/login/RegistrationForm.js"
+            Component={RegistrationForm}
+          ></Route>
+
+          <Route
+            path="/src/Components/login/CardLogin.js"
+            Component={CardLogin}
+          ></Route>
+
+          <Route
+            path="/src/Components/login/SignInSignUp.js"
+            Component={SignInSignUpForm}
+          ></Route>
+
+          <Route
+            path="/src/Components/login/SignInForDoctor.js"
+            Component={SignInForDoctor}
+          ></Route>
+        </Routes>
+      </Router>
+    </>
   );
 }
 
