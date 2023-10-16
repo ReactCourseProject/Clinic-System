@@ -1,8 +1,7 @@
 import React from "react";
 import "./serviceDetails.css";
 import "../AboutPage/About.css";
-import { Navbar } from "react-bootstrap";
-
+import Navbar from "../Nav/Navbar";
 function serviceDetails() {
   return (
     <>

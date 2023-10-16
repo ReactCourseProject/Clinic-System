@@ -96,7 +96,9 @@ function PatientSec() {
                 ></i>
               </span>
 
-              <button>Logout</button>
+              <a href="/src/Components/login/SignInForDoctor.js">
+                <button>Logout</button>
+              </a>
               {/* <img decoding="async" src={Human1} alt="" /> */}
             </div>
           </div>

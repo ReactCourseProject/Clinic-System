@@ -72,10 +72,7 @@ function DaySheet_() {
                 className="d-flex align-center fs-14 c-black rad-6 p-10"
                 href="/src/Components/SideBar/Dashboard.js"
               >
-                <i
-                  style={{ padding: "20px" }}
-                  className="fa-solid fa-gear fa-fw"
-                ></i>
+                <i className="fa-solid fa-gear fa-fw"></i>
                 <span>Settings</span>
               </a>
             </li>
@@ -93,9 +90,14 @@ function DaySheet_() {
             </div>
             <div className="icons d-flex align-center">
               <span className="notification p-relative">
-                <i className="fa-regular fa-bell fa-lg"></i>
+                <i
+                  style={{ padding: "20px" }}
+                  className="fa-regular fa-bell fa-lg"
+                ></i>
               </span>
-              <button>Logout</button>
+              <a href="/src/Components/login/SignInForDoctor.js">
+                <button>Logout</button>
+              </a>
               {/* <img decoding="async" src={Human1} alt="" /> */}
             </div>
           </div>

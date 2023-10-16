@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./FeedbackCard.css";
+import Navbars from "../Nav/Navbar";
 function FeedbackCard() {
   const [feedback, setFeedback] = useState("");
 
@@ -15,6 +16,7 @@ function FeedbackCard() {
 
   return (
     <>
+      <Navbars />
       <div className="feedback-card">
         <h2>Feedback Collection</h2>
         <p>

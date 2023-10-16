@@ -4,7 +4,8 @@ import "../OurTeam/OurTeam.css";
 import Doc1 from "../Assets/Doctor1.png";
 import Doc2 from "../Assets/Doctor2.png";
 import Doc3 from "../Assets/Doctor3.png";
-import { Navbar } from "react-bootstrap";
+// import { Navbar } from "react-bootstrap";
+import Navbar from "../Nav/Navbar";
 
 function OurTeams() {
   return (

@@ -197,7 +197,13 @@ ul {
 }
 
 .page h1 {
+  font-weight: bold;
+  font-size: 35px;
   margin: 40px;
+  display: flex;
+  position: relative;
+  bottom: 0px;
+  left: 0;
 }
 
 .page h1::before,
@@ -210,17 +216,16 @@ ul {
   position: absolute;
   bottom: -10px;
   left: 0;
-  margin-left: 740px;
 }
 
 .page h1::before {
   background-color: white;
-  width: 120px;
+  width: 180px;
 }
 
 .page h1::after {
   background-color: #00C6AC;
-  width: 40px;
+  width: 100px;
 }
 
 .wrapper {

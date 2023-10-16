@@ -65,9 +65,16 @@ function PatientDashboard_() {
           </div>
           <div className="icons d-flex align-center">
             <span className="notification p-relative">
-              <i className="fa-regular fa-bell fa-lg"></i>
+              <i
+                style={{ padding: "20px" }}
+                className="fa-regular fa-bell fa-lg"
+              ></i>
             </span>
-            <img decoding="async" src={Human} alt="" />
+            <a href="/src/Components/login/SignInSignUp.js">
+              <button>Logout</button>
+            </a>
+
+            {/* <img decoding="async" src={Human1} alt="" /> */}
           </div>
         </div>
         <h1 class="p-relative">Dashboard</h1>
@@ -78,7 +85,9 @@ function PatientDashboard_() {
               <i class="fa-solid fa-calendar-check"></i>
               <span className="number">10</span>
               <span className="text">Total Appointments</span>
-              <button className="btn-dash">Show</button>
+              <a href="/src/Components/SideBar/PatientDashboard/AppointmentsPatient.js">
+                <button className="btn-dash">Show</button>
+              </a>
             </div>
           </div>
         </div>

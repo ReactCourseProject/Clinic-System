@@ -18,11 +18,14 @@ import Appointment from "./Components/SideBar/Appointments";
 import DaySheet_ from "./Components/SideBar/DaySheet";
 import PatientDashboard_ from "./Components/SideBar/PatientDashboard/PatientDashboard";
 import AppointmentsPatient_ from "./Components/SideBar/PatientDashboard/AppointmentsPatient";
+import SignInSignUpForm from "./Components/login/SignInSignUp";
+import CardLogin from "./Components/login/CardLogin";
+import SignInForDoctor from "./Components/login/SignInForDoctor";
+import RegistrationForm from "./Components/login/RegistrationForm";
 
 function App() {
   return (
     <>
-      <Navbars />
       <Router>
         <Routes>
           <Route
@@ -72,6 +75,26 @@ function App() {
           <Route
             path="/src/Components/SideBar/PatientDashboard/AppointmentsPatient.js"
             Component={AppointmentsPatient_}
+          ></Route>
+
+          <Route
+            path="/src/Components/login/RegistrationForm.js"
+            Component={RegistrationForm}
+          ></Route>
+
+          <Route
+            path="/src/Components/login/CardLogin.js"
+            Component={CardLogin}
+          ></Route>
+
+          <Route
+            path="/src/Components/login/SignInSignUp.js"
+            Component={SignInSignUpForm}
+          ></Route>
+
+          <Route
+            path="/src/Components/login/SignInForDoctor.js"
+            Component={SignInForDoctor}
           ></Route>
         </Routes>
       </Router>

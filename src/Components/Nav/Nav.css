@@ -157,7 +157,7 @@ button:not(:disabled) {
 nav .navbar-nav .dropdown-menu {
     position: static;
     background-color: #00C6AC;
-    border: 1px solid #fff;
+    border: 1px solid #00C6AC;
     border-radius: 15px;
     width: 30px;
     height: 150px;

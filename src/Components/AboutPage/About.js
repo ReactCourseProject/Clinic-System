@@ -6,6 +6,7 @@ import log from "../Assets/logo.png";
 function AboutUs() {
   return (
     <>
+      <Navbars />
       <div class="features" id="features">
         <h2 class="main-title">About US</h2>
         <div class="centered-card">

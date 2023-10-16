@@ -91,7 +91,9 @@ function DashBoard() {
                 className="fa-regular fa-bell fa-lg"
               ></i>
             </span>
-            <button>Logout</button>
+            <a href="/src/Components/login/SignInForDoctor.js">
+              <button>Logout</button>
+            </a>
             {/* <img decoding="async" src={Human1} alt="" /> */}
           </div>
         </div>
@@ -103,19 +105,25 @@ function DashBoard() {
               <i class="fa-solid fa-person"></i>
               <span className="number">22</span>
               <span className="text">Total Patients</span>
-              <button className="btn-dash">Show</button>
+              <a href="/src/Components/SideBar/PatientSec.js">
+                <button className="btn-dash">Show</button>
+              </a>
             </div>
             <div className="box">
               <i class="fa-solid fa-calendar-check"></i>
               <span className="number">10</span>
               <span className="text">Total Appointments</span>
-              <button className="btn-dash">Show</button>
+              <a href="/src/Components/SideBar/Appointments.js">
+                <button className="btn-dash">Show</button>
+              </a>
             </div>
             <div className="box">
               <i class="fa-solid fa-file"></i>
               <span className="number">12</span>
               <span className="text">Total Day Sheets</span>
-              <button className="btn-dash">Show</button>
+              <a href="/src/Components/SideBar/DaySheet.js">
+                <button className="btn-dash">Show</button>
+              </a>
             </div>
           </div>
         </div>

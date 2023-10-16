@@ -73,7 +73,10 @@ function AppointmentsPatient() {
                   className="fa-regular fa-bell fa-lg"
                 ></i>
               </span>
-              <button>Logout</button>
+
+              <a href="/src/Components/login/SignInSignUp.js">
+                <button>Logout</button>
+              </a>
               {/* <img decoding="async" src={Human1} alt="" /> */}
             </div>
           </div>
