@@ -1,0 +1,24 @@
+[
+    {
+      "ID": 1,
+      "medicalDate": "2023-10-15",
+      "medicalObservations": "Patient presented with flu-like symptoms and cough.",
+      "PatientID": 501,
+      "DoctorID": 201
+    },
+    {
+      "ID": 2,
+      "medicalDate": "2023-10-16",
+      "medicalObservations": "Routine checkup. No significant findings.",
+      "PatientID": 502,
+      "DoctorID": 202
+    },
+    {
+      "ID": 3,
+      "medicalDate": "2023-10-17",
+      "medicalObservations": "Patient complained of joint pain and swelling. Prescribed anti-inflammatory medication.",
+      "PatientID": 503,
+      "DoctorID": 203
+    }
+  ]
+  
